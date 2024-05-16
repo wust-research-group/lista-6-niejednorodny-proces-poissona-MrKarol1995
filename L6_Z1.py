@@ -19,8 +19,7 @@ def thinning(lambda_t, lambda_max: float, T: float) -> List[float]:
     S = []
     t = 0
     while (t := t - np.log(np.random.uniform()) / lambda_max) <= T:
-        u = np.random.uniform()
-        if u < lambda_t(t) / lambda_max:
+        if np.random.uniform() < lambda_t(t) / lambda_max:
             S.append(t)
     return S
 
