@@ -34,7 +34,7 @@ def lambda_t(t: float) -> float:
     Returns:
         float: Wartość funkcji intensywności w punkcie czasowym t.
     """
-    return t**2/15
+    return 5 + 0.5 * np.sin(2 * np.pi * t / 24)
 
 
 def mean_arrivals(lambda_t, T: float) -> float:
